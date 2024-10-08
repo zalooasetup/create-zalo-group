@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mua GMF Zalo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="accessContainer">
+          <a
+            class="button"
+            id="getToken"
+            href="https://oauth.zaloapp.com/v4/oa/permission?app_id=655641159607724763&redirect_uri=http%3A%2F%2F127.0.0.1%3A5500"
+            >Lấy Token</a
+          >
+        </div>
+        <div class="sectionContainer">
+          <div class="section">
+            <h2>Tạo Đơn Hàng</h2>
+            <select id="select">
+              <option value="2275350247265190619">GMF-100</option>
+              <option value="3678557233392100095">GMF-1000</option>
+            </select>
+            <p id="createInvoiceMessage"></p>
+            <button type="button" id="buy" class="button">Tạo đơn</button>
+          </div>
+          <div class="section">
+            <h2>Thông Tin Đơn Hàng</h2>
+            <div class="product">
+              <div class="item">
+                <h3>Order ID:</h3>
+                <p id="orderId">Chưa có thông tin</p>
+              </div>
+              <div class="item">
+                <h3>Tên sản phẩm:</h3>
+                <p id="name">Chưa có thông tin</p>
+              </div>
+              <div class="item">
+                <h3>Giá tiền:</h3>
+                <p id="price">Chưa có thông tin</p>
+              </div>
+              <div class="item">
+                <h3>Mã xác nhận:</h3>
+                <p id="token">Chưa có thông tin</p>
+              </div>
+            </div>
+            <p id="confirmMessage"></p>
+            <button type="button" id="confirm" class="button" disabled>
+              Thanh toán
+            </button>
+          </div>
+        </div>
+        <div class="section">
+          <h2>Tạo nhóm GMF-1000</h2>
+          <div>
+            <span>Số lượng gói còn lại: </h3>
+            <span id="quantity">0</span>
+          </div>
+          <input type="text" id="groupName" placeholder="Tên nhóm" />
+          <p id="createGroupMessage"></p>
+          <button id="createGroup" class="button" disabled>Tạo nhóm</button>
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
